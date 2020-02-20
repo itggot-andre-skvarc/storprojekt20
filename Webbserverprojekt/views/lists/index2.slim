@@ -1,0 +1,11 @@
+a href="/" log out
+
+a href="/reg_confirm" Dina Lists
+
+h1 Allas todos
+
+ol
+  - todo.each do |item|
+    li = item["todo"]+ "               " + "[#{item['user_id'].to_s}]"
+    form action="/#{item['id']}/delete" method="post"
+        button type="submit" value="Ta BORT" TA BORT

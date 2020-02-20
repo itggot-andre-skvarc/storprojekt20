@@ -1,0 +1,17 @@
+
+a href="/" log out
+
+a href="/all_lists" Allas Lists
+
+form action="/create" method="post"
+    input type="text" placeholder="din todo" name="todo"/
+    input type="submit" value="skapa"/
+
+
+h1 Dina todos
+
+ol
+  - todo.each do |item|
+    li = item["todo"]
+    form action="/#{item['id']}/delete" method="post"
+        button type="submit" value="Ta BORT" TA BORT
